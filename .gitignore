@@ -1,0 +1,15 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/backend/.vs
+/backend/Application/bin/Debug/net8.0
+/backend/Application/obj
+/backend/Application.Test/bin/Debug/net8.0
+/backend/Application.Test/obj
+/backend/BookManagement.API/bin/Debug/net8.0
+/backend/BookManagement.API/obj
+/backend/Domain/bin/Debug/net8.0
+/backend/Domain/obj
+/backend/Infastructure/bin/Debug/net8.0
+/backend/Infastructure/obj

@@ -1,0 +1,329 @@
+2024-02-26 04:05:09.489 [INF] Now listening on: https://localhost:7200 
+2024-02-26 04:05:09.513 [INF] Now listening on: http://localhost:5275 
+2024-02-26 04:05:09.515 [INF] Application started. Press Ctrl+C to shut down. 
+2024-02-26 04:05:09.516 [INF] Hosting environment: Development 
+2024-02-26 04:05:09.516 [INF] Content root path: D:\GitSourceData\XeniaAssignment\backend\BookManagement.API 
+2024-02-26 04:05:09.845 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger - null null 
+2024-02-26 04:05:09.933 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger - 301 0 null 88.1447ms 
+2024-02-26 04:05:09.941 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null 
+2024-02-26 04:05:09.994 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 53.2747ms 
+2024-02-26 04:05:10.005 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - null null 
+2024-02-26 04:05:10.005 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - null null 
+2024-02-26 04:05:10.005 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - null null 
+2024-02-26 04:05:10.005 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null 
+2024-02-26 04:05:10.016 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 11.2254ms 
+2024-02-26 04:05:10.021 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A' 
+2024-02-26 04:05:10.021 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A' 
+2024-02-26 04:05:10.021 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A' 
+2024-02-26 04:05:10.025 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui.css - 200 144929 text/css 20.5176ms 
+2024-02-26 04:05:10.026 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-standalone-preset.js - 200 312163 text/javascript 21.0325ms 
+2024-02-26 04:05:10.027 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/swagger-ui-bundle.js - 200 1061536 text/javascript 22.4882ms 
+2024-02-26 04:05:10.028 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null 
+2024-02-26 04:05:10.064 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 36.4482ms 
+2024-02-26 04:05:10.187 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null 
+2024-02-26 04:05:10.199 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - null null 
+2024-02-26 04:05:10.201 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A' 
+2024-02-26 04:05:10.202 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/favicon-32x32.png - 200 628 image/png 3.3428ms 
+2024-02-26 04:05:10.246 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 58.9526ms 
+2024-02-26 04:05:18.834 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:05:18.840 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:05:18.852 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:05:18.868 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 12.7455ms 
+2024-02-26 04:05:18.870 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:05:18.872 [ERR] An unhandled exception has occurred while executing the request. 
+System.AggregateException: One or more errors occurred. (The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.)
+ ---> System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Infastructure.Persistent.JsonBookRepository.<ReadBooksFromFile>b__10_0() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 83
+   at Infastructure.Caching.CacheService.GetOrCreateAsync[T](String cacheKey, Func`1 createItem, Nullable`1 timeSpan) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Caching\CacheService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Infastructure.Persistent.JsonBookRepository.ReadBooksFromFile() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 89
+   at Infastructure.Persistent.JsonBookRepository..ctor(RepositoryOptions options, ICacheService cacheService, CacheOptions caching) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 35
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at BookManagement.API.Controllers.BooksController.GetBooks() in D:\GitSourceData\XeniaAssignment\backend\BookManagement.API\Controllers\BooksController.cs:line 26
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-26 04:05:18.922 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 500 null text/plain; charset=utf-8 87.5541ms 
+2024-02-26 04:06:19.257 [INF] Now listening on: https://localhost:7200 
+2024-02-26 04:06:19.280 [INF] Now listening on: http://localhost:5275 
+2024-02-26 04:06:19.282 [INF] Application started. Press Ctrl+C to shut down. 
+2024-02-26 04:06:19.283 [INF] Hosting environment: Development 
+2024-02-26 04:06:19.283 [INF] Content root path: D:\GitSourceData\XeniaAssignment\backend\BookManagement.API 
+2024-02-26 04:06:19.605 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null 
+2024-02-26 04:06:19.701 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 96.7793ms 
+2024-02-26 04:06:19.714 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null 
+2024-02-26 04:06:19.714 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null 
+2024-02-26 04:06:19.718 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.7116ms 
+2024-02-26 04:06:19.733 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.8277ms 
+2024-02-26 04:06:19.809 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null 
+2024-02-26 04:06:19.869 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 59.5785ms 
+2024-02-26 04:06:24.946 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:06:24.953 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:06:24.966 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:06:24.990 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 19.509ms 
+2024-02-26 04:06:24.992 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:06:24.994 [ERR] An unhandled exception has occurred while executing the request. 
+System.AggregateException: One or more errors occurred. (The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.)
+ ---> System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Infastructure.Persistent.JsonBookRepository.<ReadBooksFromFile>b__10_0() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 83
+   at Infastructure.Caching.CacheService.GetOrCreateAsync[T](String cacheKey, Func`1 createItem, Nullable`1 timeSpan) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Caching\CacheService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Infastructure.Persistent.JsonBookRepository.ReadBooksFromFile() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 89
+   at Infastructure.Persistent.JsonBookRepository..ctor(RepositoryOptions options, ICacheService cacheService, CacheOptions caching) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 35
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeDirectByRefWithFewArgs(Object obj, Span`1 copyOfArgs, BindingFlags invokeAttr)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at BookManagement.API.Controllers.BooksController.GetBooks() in D:\GitSourceData\XeniaAssignment\backend\BookManagement.API\Controllers\BooksController.cs:line 26
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-26 04:06:25.024 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 500 null text/plain; charset=utf-8 77.4554ms 
+2024-02-26 04:08:09.859 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:08:09.863 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:08:09.864 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:08:09.915 [INF] Executing action method BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) - Validation state: "Valid" 
+2024-02-26 04:08:15.203 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 5337.937ms 
+2024-02-26 04:08:15.206 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:08:15.211 [ERR] An unhandled exception has occurred while executing the request. 
+System.AggregateException: One or more errors occurred. (The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.)
+ ---> System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Infastructure.Persistent.JsonBookRepository.<ReadBooksFromFile>b__10_0() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 83
+   at Infastructure.Caching.CacheService.GetOrCreateAsync[T](String cacheKey, Func`1 createItem, Nullable`1 timeSpan) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Caching\CacheService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Infastructure.Persistent.JsonBookRepository.ReadBooksFromFile() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 89
+   at Infastructure.Persistent.JsonBookRepository..ctor(RepositoryOptions options, ICacheService cacheService, CacheOptions caching) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 35
+   at InvokeStub_JsonBookRepository..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitDisposeCache(ServiceCallSite transientCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at BookManagement.API.Controllers.BooksController.GetBooks() in D:\GitSourceData\XeniaAssignment\backend\BookManagement.API\Controllers\BooksController.cs:line 26
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-26 04:08:15.223 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 500 null text/plain; charset=utf-8 5374.8916ms 
+2024-02-26 04:10:34.061 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:10:34.072 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:10:34.073 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:10:34.088 [INF] Executing action method BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) - Validation state: "Valid" 
+2024-02-26 04:12:15.462 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 101387.4793ms 
+2024-02-26 04:12:15.464 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:12:15.464 [WRN] As of ""2024-02-25T21:12:15.4615857+00:00"", the heartbeat has been running for ""00:00:28.8419565"" which is longer than ""00:00:01"". This could be caused by thread pool starvation. 
+2024-02-26 04:12:15.465 [ERR] An unhandled exception has occurred while executing the request. 
+System.AggregateException: One or more errors occurred. (The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.)
+ ---> System.Text.Json.JsonException: The JSON value could not be converted to System.Collections.Generic.IEnumerable`1[Infastructure.Persistent.JsonBook]. Path: $ | LineNumber: 0 | BytePositionInLine: 1.
+   at System.Text.Json.ThrowHelper.ThrowJsonException_DeserializeUnableToConvertValue(Type propertyType)
+   at System.Text.Json.Serialization.JsonCollectionConverter`2.OnTryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, TCollection& value)
+   at System.Text.Json.Serialization.JsonConverter`1.TryRead(Utf8JsonReader& reader, Type typeToConvert, JsonSerializerOptions options, ReadStack& state, T& value, Boolean& isPopulatedValue)
+   at System.Text.Json.Serialization.JsonConverter`1.ReadCore(Utf8JsonReader& reader, JsonSerializerOptions options, ReadStack& state)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 utf8Json, JsonTypeInfo`1 jsonTypeInfo, Nullable`1 actualByteCount)
+   at System.Text.Json.JsonSerializer.ReadFromSpan[TValue](ReadOnlySpan`1 json, JsonTypeInfo`1 jsonTypeInfo)
+   at System.Text.Json.JsonSerializer.Deserialize[TValue](String json, JsonSerializerOptions options)
+   at Infastructure.Persistent.JsonBookRepository.<ReadBooksFromFile>b__10_0() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 83
+   at Infastructure.Caching.CacheService.GetOrCreateAsync[T](String cacheKey, Func`1 createItem, Nullable`1 timeSpan) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Caching\CacheService.cs:line 25
+   --- End of inner exception stack trace ---
+   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
+   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
+   at Infastructure.Persistent.JsonBookRepository.ReadBooksFromFile() in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 89
+   at Infastructure.Persistent.JsonBookRepository..ctor(RepositoryOptions options, ICacheService cacheService, CacheOptions caching) in D:\GitSourceData\XeniaAssignment\backend\Infastructure\Persistent\JsonBookRepository.cs:line 35
+   at InvokeStub_JsonBookRepository..ctor(Object, Span`1)
+   at System.Reflection.MethodBaseInvoker.InvokeWithFewArgs(Object obj, BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at System.Reflection.RuntimeConstructorInfo.Invoke(BindingFlags invokeAttr, Binder binder, Object[] parameters, CultureInfo culture)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(ServiceIdentifier serviceIdentifier, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.<>c__DisplayClass1_0.<Handle>g__Handler|0()
+   at MediatR.Wrappers.RequestHandlerWrapperImpl`2.Handle(IRequest`1 request, IServiceProvider serviceProvider, CancellationToken cancellationToken)
+   at MediatR.Mediator.Send[TResponse](IRequest`1 request, CancellationToken cancellationToken)
+   at BookManagement.API.Controllers.BooksController.GetBooks() in D:\GitSourceData\XeniaAssignment\backend\BookManagement.API\Controllers\BooksController.cs:line 26
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-02-26 04:12:15.487 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 500 null text/plain; charset=utf-8 101425.5702ms 
+2024-02-26 04:12:30.908 [INF] Now listening on: https://localhost:7200 
+2024-02-26 04:12:30.930 [INF] Now listening on: http://localhost:5275 
+2024-02-26 04:12:30.933 [INF] Application started. Press Ctrl+C to shut down. 
+2024-02-26 04:12:30.934 [INF] Hosting environment: Development 
+2024-02-26 04:12:30.935 [INF] Content root path: D:\GitSourceData\XeniaAssignment\backend\BookManagement.API 
+2024-02-26 04:12:31.299 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null 
+2024-02-26 04:12:31.394 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 95.3613ms 
+2024-02-26 04:12:31.403 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null 
+2024-02-26 04:12:31.403 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null 
+2024-02-26 04:12:31.406 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 3.024ms 
+2024-02-26 04:12:31.420 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 17.3979ms 
+2024-02-26 04:12:31.520 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null 
+2024-02-26 04:12:31.577 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.9376ms 
+2024-02-26 04:12:36.195 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:12:36.202 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:12:36.213 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:12:36.242 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-02-26 04:12:36.250 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 33.0578ms 
+2024-02-26 04:12:36.251 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:12:36.252 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 200 null application/json; charset=utf-8 56.4843ms 
+2024-02-26 04:12:56.184 [INF] Now listening on: https://localhost:7200 
+2024-02-26 04:12:56.209 [INF] Now listening on: http://localhost:5275 
+2024-02-26 04:12:56.211 [INF] Application started. Press Ctrl+C to shut down. 
+2024-02-26 04:12:56.211 [INF] Hosting environment: Development 
+2024-02-26 04:12:56.212 [INF] Content root path: D:\GitSourceData\XeniaAssignment\backend\BookManagement.API 
+2024-02-26 04:12:56.588 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/index.html - null null 
+2024-02-26 04:12:56.690 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/index.html - 200 null text/html;charset=utf-8 102.7786ms 
+2024-02-26 04:12:56.702 [INF] Request starting HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - null null 
+2024-02-26 04:12:56.702 [INF] Request starting HTTP/2 GET https://localhost:7200/_vs/browserLink - null null 
+2024-02-26 04:12:56.706 [INF] Request finished HTTP/2 GET https://localhost:7200/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 4.1572ms 
+2024-02-26 04:12:56.722 [INF] Request finished HTTP/2 GET https://localhost:7200/_vs/browserLink - 200 null text/javascript; charset=UTF-8 19.3349ms 
+2024-02-26 04:12:56.759 [INF] Request starting HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - null null 
+2024-02-26 04:12:56.816 [INF] Request finished HTTP/2 GET https://localhost:7200/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 56.9438ms 
+2024-02-26 04:15:37.580 [INF] Request starting HTTP/2 POST https://localhost:7200/api/books - application/json 120 
+2024-02-26 04:15:37.585 [INF] CORS policy execution successful. 
+2024-02-26 04:15:37.588 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.CreateBook (BookManagement.API)' 
+2024-02-26 04:15:37.602 [INF] Route matched with {action = "CreateBook", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Guid]] CreateBook(BookManagement.API.Models.BookModel) on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:15:37.642 [INF] Executing CreatedAtActionResult, writing value of type 'System.Guid'. 
+2024-02-26 04:15:37.662 [INF] Executed action BookManagement.API.Controllers.BooksController.CreateBook (BookManagement.API) in 57.5533ms 
+2024-02-26 04:15:37.664 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.CreateBook (BookManagement.API)' 
+2024-02-26 04:15:37.666 [INF] Request finished HTTP/2 POST https://localhost:7200/api/books - 201 null application/json; charset=utf-8 85.7993ms 
+2024-02-26 04:15:49.159 [INF] Request starting HTTP/2 GET https://localhost:7200/api/books - null null 
+2024-02-26 04:15:49.163 [INF] Executing endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:15:49.167 [INF] Route matched with {action = "GetBooks", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[BookManagement.API.Models.BookModel]]] GetBooks() on controller BookManagement.API.Controllers.BooksController (BookManagement.API). 
+2024-02-26 04:15:49.171 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[Domain.Entities.Book, Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'. 
+2024-02-26 04:15:49.173 [INF] Executed action BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API) in 4.626ms 
+2024-02-26 04:15:49.174 [INF] Executed endpoint 'BookManagement.API.Controllers.BooksController.GetBooks (BookManagement.API)' 
+2024-02-26 04:15:49.174 [INF] Request finished HTTP/2 GET https://localhost:7200/api/books - 200 null application/json; charset=utf-8 15.4948ms 
