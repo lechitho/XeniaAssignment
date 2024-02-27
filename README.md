@@ -1,6 +1,6 @@
 # XeniaAssignment
 book management
-This repository contains a complete solution for managing book management, consisting of a .Net Core API (BookManagemnt), and an Angular frontend application. This system allows you to perform various operations on candidate data, such as creating, updating, deleting, and viewing Book details.
+This repository contains a complete solution for managing book management, consisting of a .Net Core API (BookManagemnt), and an Angular frontend application. This system allows you to perform various operations on book data, such as creating, updating, deleting, and viewing Book details.
 
 ## Backend
 
